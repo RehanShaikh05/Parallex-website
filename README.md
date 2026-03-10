@@ -15,6 +15,9 @@ The project demonstrates how to create depth and scrolling effects using CSS tra
 ## How to Run
 1. Download or clone the repository
 2. Open `index.html` in your browser
+3. Open the website directly here:
+ 
+[ View Live Website ]  (https://rehanshaikh05.github.io/parallax-website/)
 
 ## Author
 Rehan Shaikh
