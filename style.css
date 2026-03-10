@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "poppins", "sans-serif";
+      }
+
+      main {
+        height: 100vh;
+        /* width: 100%; */
+        overflow-x: hidden;
+        perspective: 10px;
+      }
+
+      .container {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform-style: preserve-3d;
+        z-index: -1;
+      }
+
+      .container img {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      #background {
+        transform: translateZ(-39px) scale(5);
+      }
+
+      #foreground {
+        transform: translateZ(-20px) scale(3);
+      }
+
+      .container h1 {
+        position: absolute;
+        top: 3rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 10rem;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        color: #f5f5f5;
+        letter-spacing: 2px;
+
+        text-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+
+        animation: adventureReveal 1.5s ease-out forwards;
+        opacity: 0;
+      }
+
+      @keyframes adventureReveal {
+        from {
+          opacity: 0;
+          letter-spacing: 20px;
+          transform: translateX(-50%) translateY(30px);
+        }
+        to {
+          opacity: 1;
+          letter-spacing: 2px;
+          transform: translateX(-50%) translateY(0);
+        }
+      }
+
+
+
+      section {
+        background: rgb(45, 45, 45);
+        color: #fff;
+        padding: 5rem 0px;
+      }
+
+      section h2 {
+        font-size: 3rem;
+        padding: 0 5rem;
+      }
+
+      .text {
+        font-size: 1.1rem;
+        padding: 0 5rem;
+        margin: 5rem 0;
+      }
+
+      .bg1 {
+        background-image: url(./img/sport-1.jpg);
+      }
+
+      .bg2 {
+        background-image: url(./img/sport-2.jpg);
+      }
+
+      .bg3 {
+        background-image: url(./img/sport-3.jpg);
+      }
+
+      .box {
+        height: 500px;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+      }
+      .box h4 {
+        font-size: 3.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        /* BEST TEXT COLOR */
+        color: transparent;
+        -webkit-text-stroke: 2.5px #f5f5f5;   /* soft white */
+
+        letter-spacing: 4px;
+
+        /* hover effect */
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        pointer-events: none;
+      }
+
+      .box:hover h4 {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+      }
+
+
+      .box::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+
